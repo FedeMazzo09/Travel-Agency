@@ -11,7 +11,7 @@ public class Familiare extends Pacchetto {
     public int getNumeroMinori() {
         return numeroMinori;
     }
-
+// Override del metodo costoBase
     public double costoBase() {
         double costo = super.costoBase();
         int giorni = (int) ((getDataFine().getTimeInMillis() - getDataInizio().getTimeInMillis()) / (1000 * 60 * 60 * 24)) + 1;

@@ -15,7 +15,7 @@ public class RegistroPacchetti {
         }
         return false;
     }
-
+// Calcola il costo medio totale di tutti i pacchetti nel registro
     public double calcolaCostoMedioTotale() {
         if (count == 0) {
             return 0;
