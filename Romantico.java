@@ -1,20 +1,16 @@
-import java.util.Calendar;
+import java.time.LocalDate;
 
 public class Romantico extends Pacchetto {
-    private Calendar dataFesteggiamento;
+    private LocalDate dataFesteggiamento;
 
-    public Romantico(int numeroPersone, String descrizione, double prezzo, Calendar dataInizio, Calendar dataFine, Calendar dataFesteggiamento) {
+    public Romantico(int numeroPersone, String descrizione, double prezzo, LocalDate dataInizio, LocalDate dataFine, LocalDate dataFesteggiamento) {
         super(numeroPersone, descrizione, prezzo, dataInizio, dataFine, Pacchetto.TipoPacchetto.ROMANTICO);
         this.dataFesteggiamento = dataFesteggiamento;
     }
 
-    public Calendar getDataFesteggiamento() {
-        return dataFesteggiamento;
-    }
-
     public double costoBase() {
         double costo = super.costoBase();
-        if (!dataFesteggiamento.before(getDataInizio()) && !dataFesteggiamento.after(getDataFine())) {
+        if (!dataFesteggiamento.isBefore(getDataInizio()) && !dataFesteggiamento.isAfter(getDataFine())) {
             costo = costo * 0.5;
         }
         return costo;

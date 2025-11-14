@@ -1,18 +1,18 @@
-import java.util.Calendar;
+import java.time.LocalDate;
 
 public class Pacchetto {
     private int numeroPersone;
     private String descrizione;
     private double prezzoPersona;
-    private Calendar dataInizio;
-    private Calendar dataFine;
+    private LocalDate dataInizio;
+    private LocalDate dataFine;
     enum TipoPacchetto {
         FAMILIARE,
         ROMANTICO,
         LAVORO
     }
 
-    public Pacchetto(int numeroPersone, String descrizione, double prezzoPersona, Calendar dataInizio, Calendar dataFine, TipoPacchetto tipo) {
+    public Pacchetto(int numeroPersone, String descrizione, double prezzoPersona, LocalDate dataInizio, LocalDate dataFine, TipoPacchetto tipo) {
         this.numeroPersone = numeroPersone;
         this.descrizione = descrizione;
         this.prezzoPersona = prezzoPersona;
@@ -32,11 +32,11 @@ public class Pacchetto {
         return prezzoPersona;
     }
 
-    public Calendar getDataInizio() {
+    public LocalDate getDataInizio() {
         return dataInizio;
     }
 
-    public Calendar getDataFine() {
+    public LocalDate getDataFine() {
         return dataFine;
     }
 
