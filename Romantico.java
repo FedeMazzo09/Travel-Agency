@@ -4,7 +4,7 @@ public class Romantico extends Pacchetto {
     private Calendar dataFesteggiamento;
 
     public Romantico(int numeroPersone, String descrizione, double prezzo, Calendar dataInizio, Calendar dataFine, Calendar dataFesteggiamento) {
-        super(numeroPersone, descrizione, prezzo, dataInizio, dataFine);
+        super(numeroPersone, descrizione, prezzo, dataInizio, dataFine, Pacchetto.TipoPacchetto.ROMANTICO);
         this.dataFesteggiamento = dataFesteggiamento;
     }
 
@@ -15,7 +15,7 @@ public class Romantico extends Pacchetto {
     public double costoBase() {
         double costo = super.costoBase();
         if (!dataFesteggiamento.before(getDataInizio()) && !dataFesteggiamento.after(getDataFine())) {
-            costo *= 0.5;
+            costo = costo * 0.5;
         }
         return costo;
     }

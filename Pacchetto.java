@@ -6,8 +6,13 @@ public class Pacchetto {
     private double prezzoPersona;
     private Calendar dataInizio;
     private Calendar dataFine;
+    enum TipoPacchetto {
+        FAMILIARE,
+        ROMANTICO,
+        LAVORO
+    }
 
-    public Pacchetto(int numeroPersone, String descrizione, double prezzoPersona, Calendar dataInizio, Calendar dataFine) {
+    public Pacchetto(int numeroPersone, String descrizione, double prezzoPersona, Calendar dataInizio, Calendar dataFine, TipoPacchetto tipo) {
         this.numeroPersone = numeroPersone;
         this.descrizione = descrizione;
         this.prezzoPersona = prezzoPersona;
@@ -35,7 +40,7 @@ public class Pacchetto {
         return dataFine;
     }
 
-    public double costoBase() {
+    public double costoBase(){
         return numeroPersone * prezzoPersona;
     }
 }
