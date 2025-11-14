@@ -11,4 +11,11 @@ public class Lavoro extends Pacchetto {
     public int getNumeroPasti() {
         return numeroPasti;
     }
+
+    public double costoBase() {
+        double costo = super.costoBase();
+        double maggiorazione = 0.15 * numeroPasti;
+        costo = costo + (costo * maggiorazione);
+        return costo;
+    }
 }
