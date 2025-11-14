@@ -4,7 +4,7 @@ public class Lavoro extends Pacchetto {
     private int numeroPasti;
 
     public Lavoro(int numeroPersone, String descrizione, double prezzo, LocalDate dataInizio, LocalDate dataFine, int numeroPasti) {
-        super(numeroPersone, descrizione, prezzo, dataInizio, dataFine, Pacchetto.TipoPacchetto.LAVORO);
+        super(numeroPersone, descrizione, prezzo, dataInizio, dataFine);
         this.numeroPasti = numeroPasti;
     }
 

@@ -5,7 +5,7 @@ public class Familiare extends Pacchetto {
     private int numeroMinori;
 
     public Familiare(int numeroPersone, String descrizione, double prezzo, LocalDate dataInizio, LocalDate dataFine, int numeroMinori) {
-        super(numeroPersone, descrizione, prezzo, dataInizio, dataFine, Pacchetto.TipoPacchetto.FAMILIARE);
+        super(numeroPersone, descrizione, prezzo, dataInizio, dataFine);
         this.numeroMinori = numeroMinori;
     }
 

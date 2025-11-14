@@ -4,7 +4,7 @@ public class Romantico extends Pacchetto {
     private LocalDate dataFesteggiamento;
 
     public Romantico(int numeroPersone, String descrizione, double prezzo, LocalDate dataInizio, LocalDate dataFine, LocalDate dataFesteggiamento) {
-        super(numeroPersone, descrizione, prezzo, dataInizio, dataFine, Pacchetto.TipoPacchetto.ROMANTICO);
+        super(numeroPersone, descrizione, prezzo, dataInizio, dataFine);
         this.dataFesteggiamento = dataFesteggiamento;
     }
 
