@@ -11,4 +11,15 @@ public class Familiare extends Pacchetto {
     public int getNumeroMinori() {
         return numeroMinori;
     }
+
+    public double costoBase() {
+        double costo = super.costoBase();
+        int giorni = (int) ((getDataFine().getTimeInMillis() - getDataInizio().getTimeInMillis()) / (1000 * 60 * 60 * 24)) + 1;
+        if (numeroMinori == 1) {
+            costo = costo - (25 * giorni);
+        } else if (numeroMinori > 1) {
+            costo = costo - (35 * numeroMinori * giorni);
+        }
+        return costo;
+    }
 }
