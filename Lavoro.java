@@ -11,7 +11,7 @@ public class Lavoro extends Pacchetto {
     public int getNumeroPasti() {
         return numeroPasti;
     }
-// Override del metodo costoBase
+
     public double costoBase() {
         double costo = super.costoBase();
         double maggiorazione = 0.15 * numeroPasti;

@@ -11,7 +11,7 @@ public class Romantico extends Pacchetto {
     public Calendar getDataFesteggiamento() {
         return dataFesteggiamento;
     }
-// Override del metodo costoBase
+
     public double costoBase() {
         double costo = super.costoBase();
         if (!dataFesteggiamento.before(getDataInizio()) && !dataFesteggiamento.after(getDataFine())) {

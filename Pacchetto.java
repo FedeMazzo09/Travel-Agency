@@ -39,7 +39,7 @@ public class Pacchetto {
     public Calendar getDataFine() {
         return dataFine;
     }
-// Calcola il costo base del pacchetto
+
     public double costoBase(){
         return numeroPersone * prezzoPersona;
     }
