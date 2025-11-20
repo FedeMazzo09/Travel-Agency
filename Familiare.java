@@ -15,7 +15,7 @@ public class Familiare extends Pacchetto {
         if (numeroMinori == 1) {
             costo = costo - (25 * giorni);
         } else if (numeroMinori > 1) {
-            costo = costo - (35 * numeroMinori * giorni);
+            costo = costo - (35 * giorni);
         }
         return costo;
     }
